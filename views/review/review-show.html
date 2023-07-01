@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>리뷰 페이지</title>
+</head>
+<body>
+    <form>
+        각 식당 리뷰 조회 페이지<br>
+        {% for review in reviews %}
+        리뷰{{review.reviewId}}: {{review.review}}
+            {% if review.userId == userId %}
+            <!-- <button type = "button" onclick="location.href='http://localhost:{{port}}/review/update/{{review.reviewId}}'">수정</button> -->
+            <button type = "button" onclick="location.href='http://localhost:{{port}}/review/delete/{{review.reviewId}}'">삭제</button><br>
+            {% endif %}
+            <br>
+        {% endfor %}
+    </form>
+</body>
+</html>

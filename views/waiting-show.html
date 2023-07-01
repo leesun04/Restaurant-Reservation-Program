@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<head>
+    <title>웨이팅 페이지</title>
+</head>
+
+<body>
+    식당 웨이팅 목록<br>
+    {% for waiting in waitings %}
+    가게 이름: {{waiting.Store.name}}
+    <form id="form" action="http://localhost:{{port}}/waiting/cancel/{{waiting.waitingId}}" method="post">
+        <button type="submit">웨이팅 취소</button><br>
+    </form>
+    {% endfor %}
+    <br>
+    <button type = "button" onclick="location.href='http://localhost:{{port}}/'">뒤로 가기</button><br>
+</body>

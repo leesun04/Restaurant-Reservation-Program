@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<head>
+    <title>웨이팅 페이지</title>
+</head>
+
+<body>
+    현재 웨이팅 인원: {{waitingNum}}<br>
+    <form id="form" action="http://localhost:{{port}}/waiting/request/{{storeId}}" method="post">
+        <button type="submit">웨이팅 신청</button><br>
+    </form>
+</body>
+
+</html>
